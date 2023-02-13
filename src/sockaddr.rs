@@ -228,6 +228,7 @@ impl From<SocketAddrV4> for SockAddr {
             sin_addr: crate::sys::to_in_addr(addr.ip()),
             sin_zero: Default::default(),
             #[cfg(any(
+                target_os = "aix",
                 target_os = "dragonfly",
                 target_os = "freebsd",
                 target_os = "haiku",
@@ -268,6 +269,7 @@ impl From<SocketAddrV6> for SockAddr {
             #[cfg(windows)]
             u,
             #[cfg(any(
+                target_os = "aix",
                 target_os = "dragonfly",
                 target_os = "freebsd",
                 target_os = "haiku",
