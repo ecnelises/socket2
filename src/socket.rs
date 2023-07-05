@@ -1464,7 +1464,7 @@ impl Socket {
     #[cfg(not(any(
         target_os = "aix",
         target_os = "dragonfly",
-        target_os = "fuschia",
+        target_os = "fuchsia",
         target_os = "illumos",
         target_os = "netbsd",
         target_os = "openbsd",
